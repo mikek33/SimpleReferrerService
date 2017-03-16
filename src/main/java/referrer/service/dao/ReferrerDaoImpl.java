@@ -19,18 +19,16 @@ public class ReferrerDaoImpl implements ReferrerDao {
 	private ReferrerRepository referrerRepository;
 
 	@Override
-	@Transactional(readOnly = true)
-    public List<ReferrerEntity> findTopRecords(int numRecs) {
+    	public List<ReferrerEntity> findTopRecords(int numRecs) {
 		Pageable pageable = new PageRequest(0, numRecs);
-        Page<ReferrerEntity> page = referrerRepository.findAllByOrderByTotalCountDesc(pageable);
-        return page.getContent();
-    }
+		Page<ReferrerEntity> page = referrerRepository.findAllByOrderByTotalCountDesc(pageable);
+		return page.getContent();
+    	}
 	
 	@Override
-	@Transactional
-    public void save(ReferrerEntity entity) {
-        referrerRepository.save(entity);
-    }
+	public void save(ReferrerEntity entity) {
+		referrerRepository.save(entity);
+	}
 
 	@Override
 	public ReferrerEntity findByHost(String host) {
