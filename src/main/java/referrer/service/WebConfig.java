@@ -1,7 +1,3 @@
-/***********************************************************************************
- * Copyright (c) 2016  CUBIC Transportation Systems. All rights reserved.
- * CUBIC PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- ***********************************************************************************/
 package referrer.service;
 
 import org.springframework.context.annotation.Configuration;
