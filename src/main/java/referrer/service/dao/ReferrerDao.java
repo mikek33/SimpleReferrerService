@@ -26,14 +26,14 @@ public interface ReferrerDao {
 	 * @return
 	 */
 	@Transactional(readOnly = true)
-    public List<ReferrerEntity> findTopRecords(int numRecs);
+    	public List<ReferrerEntity> findTopRecords(int numRecs);
 	
 	/**
 	 * Save a referrer object.
 	 * @param entity
 	 */
 	@Transactional
-    public void save(ReferrerEntity entity);
+    	public void save(ReferrerEntity entity);
 
 	/**
 	 * Find a referrer by domain.
